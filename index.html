@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-top: 0.5rem;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      margin-right: 1rem;
+    }
+
+    .checkbox-group label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 0.3rem;
+    }
+
+    .form-buttons {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 0.6rem 1.5rem;
+      margin: 0 0.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="reset"] {
+      background-color: #6c757d;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Basic Information Form</h2>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="mobile">Mobile No.:</label>
+    <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Gender:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label>Education Done:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="education" value="10th"> 10th</label><br>
+      <label><input type="checkbox" name="education" value="12th"> 12th</label><br>
+      <label><input type="checkbox" name="education" value="Graduate"> Graduate</label><br>
+      <label><input type="checkbox" name="education" value="Postgraduate"> Postgraduate</label>
+    </div>
+
+    <label for="tea">Do you like tea?</label>
+    <select id="tea" name="tea">
+      <option value="">--Please Select--</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="sometimes">Sometimes</option>
+    </select>
+
+    <div class="form-buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>
